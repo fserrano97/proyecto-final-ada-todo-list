@@ -29,7 +29,7 @@
 .container-list {
   background-color: var(--color-secundario);
   width: 350px;
-  height: 350px;
+  height: 315px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;

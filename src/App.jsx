@@ -1,10 +1,14 @@
 import FormularioTarea from "./components/FormularioTarea/FormularioTarea";
 import ListaTarea from "./components/ListaTarea/ListaTarea";
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [tareas, setTareas] = useState([]);
+  const [tareas, setTareas] = useState(() => {
+  const tareasGuardadas = localStorage.getItem("tareas");
+
+  return tareasGuardadas ? JSON.parse(tareasGuardadas) : [];
+});
 
   const completarTarea = (id) => {
   setTareas((tareas) =>
@@ -21,6 +25,10 @@ const eliminarTarea = (id) => {
     tareas.filter((tarea) => tarea.id !== id)
   );
 };
+
+useEffect(() => {
+  localStorage.setItem("tareas", JSON.stringify(tareas));
+}, [tareas]);
 
   return (
     <>
