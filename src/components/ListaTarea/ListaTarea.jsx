@@ -1,7 +1,11 @@
 import "./ListaTarea.css";
 import Tarea from "../Tarea/Tarea";
 
-const ListaTarea = ({ tareas, completarTarea }) => {
+const ListaTarea = ({
+  tareas,
+  completarTarea,
+  eliminarTarea,
+}) => {
   return (
     <div>
       <h2>Mis tareas</h2>
@@ -11,6 +15,7 @@ const ListaTarea = ({ tareas, completarTarea }) => {
           key={tarea.id}
           tarea={tarea}
           completarTarea={completarTarea}
+          eliminarTarea={eliminarTarea}
         />
       ))}
     </div>

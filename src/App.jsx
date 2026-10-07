@@ -16,13 +16,23 @@ function App() {
   );
 };
 
+const eliminarTarea = (id) => {
+  setTareas((tareas) =>
+    tareas.filter((tarea) => tarea.id !== id)
+  );
+};
+
   return (
     <>
       <div className="App">
         <h1 className="titulo-principal">Mis Tareas</h1>
 
         <div className="container-list">
-          <ListaTarea tareas={tareas} completarTarea={completarTarea} />
+         <ListaTarea
+  tareas={tareas}
+  completarTarea={completarTarea}
+  eliminarTarea={eliminarTarea}
+/>
         </div>
 
         <div className="container-form">
