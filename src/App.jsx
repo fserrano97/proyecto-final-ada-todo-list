@@ -11,7 +11,7 @@ function App() {
         <h1 className="titulo-principal">Mis Tareas</h1>
 
         <div className="container-list">
-          <ListaTarea />
+      <ListaTarea tareas={tareas} />
         </div>
 
         <div className="container-form">
