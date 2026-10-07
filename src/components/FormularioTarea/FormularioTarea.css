@@ -1,0 +1,31 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.titulo-form{
+  color: #ff7ba7;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-tarea{
+  background: white;
+    padding: 12px 5px;
+    width: 310px;
+    color: var(--color-secundario);
+}
+.btn{
+   font-weight: lighter;
+    color: white;
+    font-weight: 700;
+    width: 85px;
+    border: 1px solid white;
+    border-radius: 39px;
+    padding: 10px;}
