@@ -1,0 +1,45 @@
+:root {
+  --fondo: #fef2d6;
+  --color-principal: #f2cacb;
+  --texto: #0f0d0b;
+  --color-secundario: #f790b2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.titulo-principal{
+  color: var(--color-secundario);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container-list {
+  background-color: var(--color-secundario);
+  width: 350px;
+  height: 315px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.container-form {
+    background-color: var(--color-principal);
+    width: 350px;
+    height: 170px;
+    padding: 20px;
+    border-radius: 4px;
+}

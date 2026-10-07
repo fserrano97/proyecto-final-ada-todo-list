@@ -1,0 +1,17 @@
+@import "tailwindcss";
+:root{
+    --fondo: #FEF2D6;
+}
+
+
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--fondo);
+ font-family: "Lexend Deca", sans-serif;
+ font-weight: 500;
+
+}
