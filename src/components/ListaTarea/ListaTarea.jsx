@@ -1,8 +1,20 @@
+import "./ListaTarea.css";
+import Tarea from "../Tarea/Tarea";
 
-const ListaTarea = () => {
+const ListaTarea = ({ tareas, completarTarea }) => {
   return (
-    <div>ListaTarea</div>
-  )
-}
+    <div>
+      <h2>Mis tareas</h2>
 
-export default ListaTarea
+      {tareas.map((tarea) => (
+        <Tarea
+          key={tarea.id}
+          tarea={tarea}
+          completarTarea={completarTarea}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default ListaTarea;
