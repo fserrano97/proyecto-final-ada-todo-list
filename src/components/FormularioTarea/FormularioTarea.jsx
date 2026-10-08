@@ -1,20 +1,29 @@
 import "./FormularioTarea.css";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const FormularioTarea = ({ setTareas }) => {
   const [nuevaTarea, setNuevaTarea] = useState("");
+  const [error, setError] = useState(false);
+  const agregarTarea = (e) => {
+    e.preventDefault();
+    if (nuevaTarea.trim() === "") {
+      setError(true);
+      return;
+    }
 
-const agregarTarea = (e) => {
-  e.preventDefault();
+    setError(false);
+    const nueva = {
+      id: Date.now(),
+      texto: nuevaTarea,
+      completada: false,
+    };
 
-  const nueva = {
-    id: Date.now(),
-    texto: nuevaTarea,
-    completada: false,
+    setTareas((tareas) => [...tareas, nueva]);
+
+    setNuevaTarea("");
   };
-
-  setTareas((tareas) => [...tareas, nueva]);
-};
 
   return (
     <div>
@@ -27,11 +36,23 @@ const agregarTarea = (e) => {
             type="text"
             placeholder="Escribe aqui.."
             value={nuevaTarea}
-            onChange={(e) => setNuevaTarea(e.target.value)}
+            maxLength={30}
+            onChange={(e) => {
+              setNuevaTarea(e.target.value);
+              setError(false);
+            }}
           />
 
+          {error && (
+            <div className="cartel-error">
+              <span>⚠️¡Ups! Escribe una tarea..</span>
+
+              <button className="cartel-cruz" onClick={() => setError(false)}>✕</button>
+            </div>
+          )}
+
           <button className="btn btn-primary" type="submit">
-            Agregar
+          <FontAwesomeIcon icon={faPlus} />
           </button>
         </form>
       </div>
