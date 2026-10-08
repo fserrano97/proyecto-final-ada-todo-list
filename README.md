@@ -1,7 +1,7 @@
 
 # TodoList by flor— Lista de tareas
 
-Aplicación web desarrollada con React que permite crear tareas pendientes, tachar las completas e eliminar las mismas ultilizando localStorage.
+Aplicación web desarrollada con React que permite crear tareas pendientes, tachar las completas y eliminar las mismas ultilizando localStorage.
 El proyecto fue realizado como trabajo práctico final del curso de Frontend de ADA.
 
 ## Funcionalidades:
