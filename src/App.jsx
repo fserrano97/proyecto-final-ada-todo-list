@@ -2,6 +2,8 @@ import FormularioTarea from "./components/FormularioTarea/FormularioTarea";
 import ListaTarea from "./components/ListaTarea/ListaTarea";
 import "./App.css";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilter } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [tareas, setTareas] = useState(() => {
@@ -58,28 +60,14 @@ function App() {
               <FormularioTarea setTareas={setTareas} />
             </div>
           </div>
-
           <div className="filtros">
-            <button
-              className={filtro === "todas" ? "activo" : ""}
-              onClick={() => setFiltro("todas")}
-            >
-              Todas
-            </button>
+            <FontAwesomeIcon icon={faFilter} />
 
-            <button
-              className={filtro === "pendientes" ? "activo" : ""}
-              onClick={() => setFiltro("pendientes")}
-            >
-              Pendientes
-            </button>
-
-            <button
-              className={filtro === "completadas" ? "activo" : ""}
-              onClick={() => setFiltro("completadas")}
-            >
-              Completadas
-            </button>
+            <select value={filtro} onChange={(e) => setFiltro(e.target.value)}>
+              <option value="todas">Todas</option>
+              <option value="pendientes">Pendientes</option>
+              <option value="completadas">Completadas</option>
+            </select>
           </div>
         </div>
       </div>
