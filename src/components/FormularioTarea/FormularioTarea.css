@@ -1,31 +1,90 @@
-.form-container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.titulo-form{
-  color: #ff7ba7;
-    font-weight: 700;
-    font-size: 1.1em;
+.titulo-form {
+  color: #d54776;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 0px 20px;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
-.input-tarea{
-  background: white;
-    padding: 12px 5px;
-    width: 310px;
-    color: var(--color-secundario);
+input:focus {
+  outline: none;
+  border: 1px solid var(--color-secundario);
 }
-.btn{
-   font-weight: lighter;
-    color: white;
+input:hover{
+  border: 1px solid var(--color-secundario);
+}
+.input-tarea {
+  background: white;
+  padding: 12px 5px;
+  width: 92%;
+  color: var(--color-secundario);
+}
+.btn {
+ color: #d54776;
     font-weight: 700;
-    width: 85px;
-    border: 1px solid white;
+
+    border: 2px solid #f790b2;
     border-radius: 39px;
-    padding: 10px;}
+    cursor: pointer;
+    font-size: 1.3em;
+    padding: 5px 10px;
+}
+
+.btn:hover {
+  background-color: var(--color-secundario);
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--color-secundario);
+}
+
+.cartel-error {
+  bottom: 25px;
+  border-radius: 3px;
+  color: var(--texto);
+  font-size: 0.8em;
+   background: rgb(253, 85, 34);
+  font-weight: bold;
+  right: 16px;
+  padding: 20px;
+  position: absolute;
+}
+
+.cartel-error button {
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  position: absolute;
+  color: #ffffff94;
+  top: 5px;
+}
+
+@media (max-width: 600px) {
+  .titulo-form{
+       padding: 0px 15px;
+  }
+ 
+    .btn {
+      margin-bottom: 10px;
+    }
+   .cartel-error {
+   padding: 5px 17px;
+        font-size: 0.9em;
+        border-radius: 3px;
+        background: rgb(253, 85, 34);
+    }
+   .cartel-error button {
+    top: 0px;
+        right: 4px;
+   }
+}

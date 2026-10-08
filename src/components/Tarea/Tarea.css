@@ -1,3 +1,23 @@
+
+
+.tarea{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  gap: 10px;
+  font-size: 1.2em;
+}
+
+.btn-completar{
+  cursor: pointer;
+}
+
+.btn-eliminar{
+  cursor: pointer;
+}
+
 .completada {
   text-decoration: line-through;
   opacity: 0.5;
